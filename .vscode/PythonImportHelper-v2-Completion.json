@@ -1,0 +1,272 @@
+[
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "deepcopy",
+        "importPath": "copy",
+        "description": "copy",
+        "isExtraImport": true,
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Checkers",
+        "kind": 6,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "class Checkers(object):\n    INFI = 10 ** 9\n    WHITE = 1\n    WHITE_MAN = 1\n    WHITE_KING = 3\n    BLACK = 0\n    BLACK_MAN = 2\n    BLACK_KING = 4\n    move_x = [1, 1, -1, -1]\n    move_y = [1, -1, 1, -1]",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "Mode",
+        "kind": 6,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "class Mode(Enum):\n    SINGLE_PLAYER = 0\n    MULTIPLE_PLAYER = 1\nclass Algorithm(Enum):\n    MINIMAX = 0\nGAME_MODE = Mode.SINGLE_PLAYER\nclass GUI:\n    def __init__(self) -> None:\n        super().__init__()\n        self.game = Checkers(CHECKER_SIZE)",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "Algorithm",
+        "kind": 6,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "class Algorithm(Enum):\n    MINIMAX = 0\nGAME_MODE = Mode.SINGLE_PLAYER\nclass GUI:\n    def __init__(self) -> None:\n        super().__init__()\n        self.game = Checkers(CHECKER_SIZE)\n        self.previous_board = [self.game.getBoard()]\n        self.previous_ptr = 0\n        self.maxDepth = MAX_DEPTH",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "GUI",
+        "kind": 6,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "class GUI:\n    def __init__(self) -> None:\n        super().__init__()\n        self.game = Checkers(CHECKER_SIZE)\n        self.previous_board = [self.game.getBoard()]\n        self.previous_ptr = 0\n        self.maxDepth = MAX_DEPTH\n        self.player = FIRST_PLAYER\n        if self.player == Checkers.WHITE and GAME_MODE == Mode.SINGLE_PLAYER:\n            if Algorithm.MINIMAX == Algorithm.MINIMAX:",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Checkers\")\nimage_size = 100\nb_men = ImageTk.PhotoImage(Image.open(\n    'black_man.png').resize((image_size, image_size)))\nb_king = ImageTk.PhotoImage(Image.open(\n    'black_king.png').resize((image_size, image_size)))\nw_men = ImageTk.PhotoImage(Image.open(\n    'white_man.png').resize((image_size, image_size)))\nw_king = ImageTk.PhotoImage(Image.open(",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "image_size",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "image_size = 100\nb_men = ImageTk.PhotoImage(Image.open(\n    'black_man.png').resize((image_size, image_size)))\nb_king = ImageTk.PhotoImage(Image.open(\n    'black_king.png').resize((image_size, image_size)))\nw_men = ImageTk.PhotoImage(Image.open(\n    'white_man.png').resize((image_size, image_size)))\nw_king = ImageTk.PhotoImage(Image.open(\n    'white_king.png').resize((image_size, image_size)))\nblank = ImageTk.PhotoImage(Image.open(",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "b_men",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "b_men = ImageTk.PhotoImage(Image.open(\n    'black_man.png').resize((image_size, image_size)))\nb_king = ImageTk.PhotoImage(Image.open(\n    'black_king.png').resize((image_size, image_size)))\nw_men = ImageTk.PhotoImage(Image.open(\n    'white_man.png').resize((image_size, image_size)))\nw_king = ImageTk.PhotoImage(Image.open(\n    'white_king.png').resize((image_size, image_size)))\nblank = ImageTk.PhotoImage(Image.open(\n    'blank.png').resize((image_size, image_size)))",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "b_king",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "b_king = ImageTk.PhotoImage(Image.open(\n    'black_king.png').resize((image_size, image_size)))\nw_men = ImageTk.PhotoImage(Image.open(\n    'white_man.png').resize((image_size, image_size)))\nw_king = ImageTk.PhotoImage(Image.open(\n    'white_king.png').resize((image_size, image_size)))\nblank = ImageTk.PhotoImage(Image.open(\n    'blank.png').resize((image_size, image_size)))\nBoard = List[List[int]]\nposition_coordinates = Tuple[int, int]",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "w_men",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "w_men = ImageTk.PhotoImage(Image.open(\n    'white_man.png').resize((image_size, image_size)))\nw_king = ImageTk.PhotoImage(Image.open(\n    'white_king.png').resize((image_size, image_size)))\nblank = ImageTk.PhotoImage(Image.open(\n    'blank.png').resize((image_size, image_size)))\nBoard = List[List[int]]\nposition_coordinates = Tuple[int, int]\nlist_position_coordinate = List[position_coordinates]\npossible_moves = List[Tuple[position_coordinates, list_position_coordinate]]",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "w_king",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "w_king = ImageTk.PhotoImage(Image.open(\n    'white_king.png').resize((image_size, image_size)))\nblank = ImageTk.PhotoImage(Image.open(\n    'blank.png').resize((image_size, image_size)))\nBoard = List[List[int]]\nposition_coordinates = Tuple[int, int]\nlist_position_coordinate = List[position_coordinates]\npossible_moves = List[Tuple[position_coordinates, list_position_coordinate]]\nclass Checkers(object):\n    INFI = 10 ** 9",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "blank",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "blank = ImageTk.PhotoImage(Image.open(\n    'blank.png').resize((image_size, image_size)))\nBoard = List[List[int]]\nposition_coordinates = Tuple[int, int]\nlist_position_coordinate = List[position_coordinates]\npossible_moves = List[Tuple[position_coordinates, list_position_coordinate]]\nclass Checkers(object):\n    INFI = 10 ** 9\n    WHITE = 1\n    WHITE_MAN = 1",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "Board",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "Board = List[List[int]]\nposition_coordinates = Tuple[int, int]\nlist_position_coordinate = List[position_coordinates]\npossible_moves = List[Tuple[position_coordinates, list_position_coordinate]]\nclass Checkers(object):\n    INFI = 10 ** 9\n    WHITE = 1\n    WHITE_MAN = 1\n    WHITE_KING = 3\n    BLACK = 0",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "position_coordinates",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "position_coordinates = Tuple[int, int]\nlist_position_coordinate = List[position_coordinates]\npossible_moves = List[Tuple[position_coordinates, list_position_coordinate]]\nclass Checkers(object):\n    INFI = 10 ** 9\n    WHITE = 1\n    WHITE_MAN = 1\n    WHITE_KING = 3\n    BLACK = 0\n    BLACK_MAN = 2",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "list_position_coordinate",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "list_position_coordinate = List[position_coordinates]\npossible_moves = List[Tuple[position_coordinates, list_position_coordinate]]\nclass Checkers(object):\n    INFI = 10 ** 9\n    WHITE = 1\n    WHITE_MAN = 1\n    WHITE_KING = 3\n    BLACK = 0\n    BLACK_MAN = 2\n    BLACK_KING = 4",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "possible_moves",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "possible_moves = List[Tuple[position_coordinates, list_position_coordinate]]\nclass Checkers(object):\n    INFI = 10 ** 9\n    WHITE = 1\n    WHITE_MAN = 1\n    WHITE_KING = 3\n    BLACK = 0\n    BLACK_MAN = 2\n    BLACK_KING = 4\n    move_x = [1, 1, -1, -1]",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "CHECKER_SIZE",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "CHECKER_SIZE = 8\nFIRST_PLAYER = Checkers.BLACK\nMAX_DEPTH = 5\nINCREASE_DEPTH = True\nclass Mode(Enum):\n    SINGLE_PLAYER = 0\n    MULTIPLE_PLAYER = 1\nclass Algorithm(Enum):\n    MINIMAX = 0\nGAME_MODE = Mode.SINGLE_PLAYER",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "FIRST_PLAYER",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "FIRST_PLAYER = Checkers.BLACK\nMAX_DEPTH = 5\nINCREASE_DEPTH = True\nclass Mode(Enum):\n    SINGLE_PLAYER = 0\n    MULTIPLE_PLAYER = 1\nclass Algorithm(Enum):\n    MINIMAX = 0\nGAME_MODE = Mode.SINGLE_PLAYER\nclass GUI:",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_DEPTH",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "MAX_DEPTH = 5\nINCREASE_DEPTH = True\nclass Mode(Enum):\n    SINGLE_PLAYER = 0\n    MULTIPLE_PLAYER = 1\nclass Algorithm(Enum):\n    MINIMAX = 0\nGAME_MODE = Mode.SINGLE_PLAYER\nclass GUI:\n    def __init__(self) -> None:",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "INCREASE_DEPTH",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "INCREASE_DEPTH = True\nclass Mode(Enum):\n    SINGLE_PLAYER = 0\n    MULTIPLE_PLAYER = 1\nclass Algorithm(Enum):\n    MINIMAX = 0\nGAME_MODE = Mode.SINGLE_PLAYER\nclass GUI:\n    def __init__(self) -> None:\n        super().__init__()",
+        "detail": "play",
+        "documentation": {}
+    },
+    {
+        "label": "GAME_MODE",
+        "kind": 5,
+        "importPath": "play",
+        "description": "play",
+        "peekOfCode": "GAME_MODE = Mode.SINGLE_PLAYER\nclass GUI:\n    def __init__(self) -> None:\n        super().__init__()\n        self.game = Checkers(CHECKER_SIZE)\n        self.previous_board = [self.game.getBoard()]\n        self.previous_ptr = 0\n        self.maxDepth = MAX_DEPTH\n        self.player = FIRST_PLAYER\n        if self.player == Checkers.WHITE and GAME_MODE == Mode.SINGLE_PLAYER:",
+        "detail": "play",
+        "documentation": {}
+    }
+]
